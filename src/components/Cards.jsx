@@ -23,59 +23,41 @@ export default function Cards() {
   ];
 
   return (
-    <div style={{ background: '#002C69', width: '100%', padding: '3rem 0' }}>
-      {/* Contenedor del título alineado con la primera card */}
-      <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 2rem' }}>
-        <p style={{ color: '#AAA', fontSize: '1.2rem', letterSpacing: '2px', marginLeft: '14%' }}>
-          QUÉ NOS DIFERENCIA
+    <div className="w-full py-8 md:py-12 lg:py-16 min-h-[calc(100vh-64px)] flex items-center justify-center flex-col">
+      {/* Contenedor del título alineado con las cards */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <p className="text-[#00AEFF] text-base sm:text-lg tracking-[3px] font-semibold uppercase mb-2 text-center">
+          Qué nos diferencia
         </p>
-        <h2
-          style={{
-            color: 'white',
-            fontSize: '3rem',
-            fontWeight: 'normal',
-            marginBottom: '2rem',
-            marginLeft: '14%', // Mueve el título para alinearlo con la primera card
-          }}
-        >
-          4 razones para unirte al <span style={{ color: '#0094FF' }}>#</span>TeamUnstoppables
+        <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-8 text-center">
+          4 razones para unirte al <span className="text-[#0094FF] font-bold">#</span>TeamUnstoppables
         </h2>
       </div>
 
-      {/* Contenedor de Cards */}
-      <section
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          gap: '1rem',
-          margin: '0 auto',
-          maxWidth: '1400px',
-          flexWrap: 'nowrap',
-        }}
-      >
+      <section className="flex justify-center flex-wrap gap-4 sm:gap-6 mx-auto max-w-7xl p-4">
         {data.map((card, index) => (
           <div
             key={index}
-            style={{
-              background: 'rgba(255, 255, 255, 0.1)',
-              backdropFilter: 'blur(15px)',
-              WebkitBackdropFilter: 'blur(15px)',
-              border: '1px solid rgba(255, 255, 255, 0.3)',
-              borderRadius: '12px',
-              width: '100%',
-              maxWidth: '300px',
-              boxShadow: '0 4px 10px rgba(0,0,0,0.3)',
-              overflow: 'hidden',
-              textAlign: 'center',
-              padding: '1.5rem',
-              transition: 'transform 0.2s ease-in-out',
-            }}
+            className="bg-white/[0.08] backdrop-blur-xl border border-white/10 rounded-2xl 
+                      flex-1 basis-[160px] sm:basis-[200px] md:basis-[250px] min-w-[160px] sm:min-w-[200px] md:min-w-[250px]
+                      shadow-lg shadow-black/20 overflow-hidden text-center p-4 sm:p-6 md:p-8 
+                      transition-all duration-300 hover:translate-y-[-10px] 
+                      hover:shadow-xl hover:shadow-black/30 hover:bg-white/[0.12]
+                      cursor-pointer z-10 relative"
           >
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <img src={card.image} alt={card.title} style={{ width: 'auto', height: '80px', marginBottom: '1rem' }} />
+            <div className="flex justify-center items-center h-[70px] sm:h-[85px] md:h-[100px] mb-4 sm:mb-6">
+              <img 
+                src={card.image} 
+                alt={card.title} 
+                className="h-[60px] sm:h-[70px] md:h-[85px] w-auto drop-shadow-[0_5px_15px_rgba(0,148,255,0.5)]" 
+              />
             </div>
-            <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '0.5rem' }}>{card.title}</h3>
-            <p style={{ color: '#ddd', fontSize: '0.9rem', marginBottom: '1rem' }}>{card.text}</p>
+            <h3 className="text-white text-lg sm:text-xl font-semibold mb-2 sm:mb-4">
+              {card.title}
+            </h3>
+            <p className="text-[#B8D0FF] text-sm sm:text-base leading-relaxed font-light">
+              {card.text}
+            </p>
           </div>
         ))}
       </section>
