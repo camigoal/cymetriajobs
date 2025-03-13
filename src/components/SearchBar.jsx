@@ -46,7 +46,6 @@ const styles = {
     width: '100%',
     margin: '0 auto',
     marginTop: '4rem',
-    marginBottom: '4rem',
   },
   mainTitle: {
     margin: '0',
@@ -57,7 +56,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     width: '100%',
-    gap: '2rem', 
+    gap: '2rem',
   },
   formGroup: {
     display: 'flex',
@@ -86,7 +85,7 @@ const styles = {
   },
   button: {
     alignSelf: 'flex-end',
-    background: '#ff5a5f',
+    background: '#0094FF',
     color: '#fff',
     border: 'none',
     padding: '0.7rem 1.2rem',

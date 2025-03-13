@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ImageWithText() {
   return (
-    <div style={{ background: '#4F4AC0', width: '100%' }}>
+    <div style={{ background: '#0094FF', width: '100%' }}>
       <section
         style={{
           display: 'flex',
@@ -12,11 +12,11 @@ export default function ImageWithText() {
           gap: '2rem',
           padding: '2rem',
           maxWidth: '1200px',
-          margin: '0 auto', 
+          margin: '0 auto',
         }}
       >
         <div style={{ flex: '1' }}>
-          <h2 style={{ fontSize: '2rem', marginBottom: '1rem', color: '#fff' }}>
+          <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: '#fff' }}>
             Trabaja con nosotros
           </h2>
 
@@ -38,13 +38,17 @@ export default function ImageWithText() {
 
           <button
             style={{
-              background: '#ff8427',
+              background: '#FF6B00',
               color: '#fff',
               border: 'none',
-              padding: '0.7rem 1.2rem',
-              borderRadius: '4px',
+              padding: '0.8rem 1.4rem',
+              borderRadius: '6px',
+              fontSize: '1rem',
               cursor: 'pointer',
+              transition: 'background 0.3s ease',
             }}
+            onMouseOver={(e) => (e.target.style.background = '#E65A00')}
+            onMouseOut={(e) => (e.target.style.background = '#FF6B00')}
           >
             Ver vacantes
           </button>

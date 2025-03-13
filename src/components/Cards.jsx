@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function Cards() {
   const data = [
     {
@@ -25,38 +23,59 @@ export default function Cards() {
   ];
 
   return (
-    <div style={{ background: '#1e212b', width: '100%', padding: '2rem 0' }}>
+    <div style={{ background: '#002C69', width: '100%', padding: '3rem 0' }}>
+      {/* Contenedor del título alineado con la primera card */}
+      <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 2rem' }}>
+        <p style={{ color: '#AAA', fontSize: '1.2rem', letterSpacing: '2px', marginLeft: '14%' }}>
+          QUÉ NOS DIFERENCIA
+        </p>
+        <h2
+          style={{
+            color: 'white',
+            fontSize: '3rem',
+            fontWeight: 'normal',
+            marginBottom: '2rem',
+            marginLeft: '14%', // Mueve el título para alinearlo con la primera card
+          }}
+        >
+          4 razones para unirte al <span style={{ color: '#0094FF' }}>#</span>TeamUnstoppables
+        </h2>
+      </div>
+
+      {/* Contenedor de Cards */}
       <section
         style={{
           display: 'flex',
           justifyContent: 'center',
-          gap: '1.5rem',
+          gap: '1rem',
           margin: '0 auto',
-          marginBottom : '2rem',
-          marginTop : '2rem',
           maxWidth: '1400px',
-          flexWrap: 'wrap', 
+          flexWrap: 'nowrap',
         }}
       >
         {data.map((card, index) => (
           <div
             key={index}
             style={{
-              background: '#2f3b52',
-              border: '1px solid #444',
-              borderRadius: '8px',
+              background: 'rgba(255, 255, 255, 0.1)',
+              backdropFilter: 'blur(15px)',
+              WebkitBackdropFilter: 'blur(15px)',
+              border: '1px solid rgba(255, 255, 255, 0.3)',
+              borderRadius: '12px',
               width: '100%',
-              maxWidth: '250px',
-              boxShadow: '0 4px 10px rgba(0,0,0,0.2)',
+              maxWidth: '300px',
+              boxShadow: '0 4px 10px rgba(0,0,0,0.3)',
               overflow: 'hidden',
               textAlign: 'center',
               padding: '1.5rem',
               transition: 'transform 0.2s ease-in-out',
             }}
           >
-            <img src={card.image} alt={card.title} style={{ width: 'auto', height: '80px', marginBottom: '1rem' }} />
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <img src={card.image} alt={card.title} style={{ width: 'auto', height: '80px', marginBottom: '1rem' }} />
+            </div>
             <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '0.5rem' }}>{card.title}</h3>
-            <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>{card.text}</p>
+            <p style={{ color: '#ddd', fontSize: '0.9rem', marginBottom: '1rem' }}>{card.text}</p>
           </div>
         ))}
       </section>
