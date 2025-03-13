@@ -10,6 +10,7 @@ import "../styles/global.css";
 
 <html lang="es">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8" />
     <title>CYMETRIA JOBS</title>
     <style>
@@ -20,8 +21,11 @@ import "../styles/global.css";
       }
     </style>
   </head>
-  <body>
-    <Navbar />
+  <body class="relative h-full w-full bg-neutral-900">
+    <div class="absolute top-0 -z-10 h-full w-full bg-white"><div class="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]"></div></div>
+    <div class="absolute top-0 -z-10 h-full w-full bg-white"><div class="absolute bottom-auto left-auto right-10 top-20 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]"></div></div>
+    <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#04509d_10%,#000_100%)]"></div>
+    <!-- <Navbar /> -->
     <Carousel client:load />
     <Cards />
     <JoinOurTeam />
